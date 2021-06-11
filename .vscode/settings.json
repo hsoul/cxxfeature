@@ -1,0 +1,28 @@
+{
+    "clang-format.executable": "/usr/local/bin/clang-format",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.defaultFormatter": "xaver.clang-format",
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/build/",
+        "--completion-style=detailed",
+        // "--header-insertion-decorators",
+        "-log=verbose",
+        "-pretty",
+        "--clang-tidy"
+    ],
+    "clangd.onConfigChanged": "restart",
+    "clangd.semanticHighlighting": true,
+    "C_Cpp.intelliSenseEngine": "Disabled",
+    "files.associations": {
+        "coroutine": "cpp",
+        "cstddef": "cpp",
+        "ranges": "cpp",
+        "functional": "cpp",
+        "type_traits": "cpp",
+        "__config": "cpp",
+        "complex": "cpp"
+    },
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "RTT_Studio.Build.Parallel_Jobs": "1",
+}

@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/rh/devtoolset-10/root/usr/lib/gcc/x86_64-redhat-linux/10/../../../../include/c++/10/**",
+                "/opt/rh/devtoolset-10/root/usr/lib/gcc/x86_64-redhat-linux/10/../../../../include/c++/10/x86_64-redhat-linux/**",
+                "/opt/rh/devtoolset-10/root/usr/lib/gcc/x86_64-redhat-linux/10/../../../../include/c++/10/backward/**",
+                "/opt/rh/devtoolset-10/root/usr/lib/gcc/x86_64-redhat-linux/10/include/**",
+                "/usr/local/include/**",
+                "/opt/rh/devtoolset-10/root/usr/include/**",
+                "/usr/include/**",
+                "/opt/rh/devtoolset-10/root/usr/include/c++/10/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/local/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,71 @@
+---
+# BasedOnStyle:  Google
+AccessModifierOffset: -2 # 访问说明符(public、private等)的偏移
+IndentWidth:     2 # 缩进
+TabWidth:        8
+AlignAfterOpenBracket:	Align # 开括号(开圆括号、开尖括号、开方括号)后的对齐: Align, DontAlign, AlwaysBreak(总是在开括号后换行)
+AlignConsecutiveDeclarations: false # 连续声明时，对齐所有声明的变量名
+ConstructorInitializerIndentWidth: 4
+AlignEscapedNewlinesLeft: true
+AlignTrailingComments: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AlwaysBreakTemplateDeclarations: true
+AlwaysBreakBeforeMultilineStrings: true
+#BreakBeforeBinaryOperators: false
+#BreakBeforeTernaryOperators: false
+BreakConstructorInitializersBeforeComma: true
+BinPackParameters: true
+ColumnLimit:     0
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+DerivePointerBinding: true
+ExperimentalAutoDetectBinPacking: false
+IndentCaseLabels: true
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: None
+ObjCSpaceBeforeProtocolList: false
+PenaltyBreakBeforeFirstCallParameter: 1
+PenaltyBreakComment: 60
+PenaltyBreakString: 1000
+PenaltyBreakFirstLessLess: 120
+PenaltyExcessCharacter: 1000000
+PenaltyReturnTypeOnItsOwnLine: 200
+PointerBindsToType: true
+SpacesBeforeTrailingComments: 1 # 注释离代码的距离
+Cpp11BracedListStyle: true
+Standard:        Auto
+UseTab:          Never
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: Never
+IndentFunctionDeclarationAfterType: true
+SpacesInParentheses: false
+SpacesInAngles:  false
+SpaceInEmptyParentheses: false
+SpacesInCStyleCastParentheses: false
+SpaceAfterControlStatementKeyword: true
+SpaceBeforeAssignmentOperators: true
+ContinuationIndentWidth: 4
+BreakBeforeBraces: Custom 
+BraceWrapping: # 大括号换行，只有当BreakBeforeBraces设置为Custom时才有效
+  AfterClass: true # class定义后面
+  AfterControlStatement: true # 控制语句后面
+  AfterEnum: false # enum定义后面
+  AfterFunction: true # 函数定义后面
+  AfterNamespace: true # 命名空间定义后面
+  AfterObjCDeclaration: false # ObjC定义后面
+  AfterStruct: true # struct定义后面
+  AfterUnion: true # union定义后面
+  AfterExternBlock: false
+  BeforeCatch:	true # catch之前
+  BeforeElse:	true # else之前
+  IndentBraces:	false # 缩进大括号
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+
+BinPackArguments: false # false表示函数实参要么都在同一行，要么都各自一行
+BinPackParameters: false # false表示所有形参要么都在同一行，要么都各自一行
+
+...
+
