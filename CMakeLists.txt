@@ -12,13 +12,13 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-set(CMAKE_CXX_FLAGS_DEBUG "-g -Wall -O0") # -save-temps 保存编译中间文件
+set(CMAKE_CXX_FLAGS_DEBUG "-g -Wall -O0 -save-temps") # -save-temps 保存编译中间文件
 
 if (USE_CLANG) 
   set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wno-unused-variable -Wno-unused-function -Wno-unused-private-field")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
 else()
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcoroutines -fno-exceptions")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcoroutines -fexceptions") # -fno-exceptions
 endif()
 
 set(CMAKE_CXX_FLAGS_RELEASE "-02 -DNDEBUG")

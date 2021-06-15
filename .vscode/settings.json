@@ -13,7 +13,6 @@
     ],
     "clangd.onConfigChanged": "restart",
     "clangd.semanticHighlighting": true,
-    "C_Cpp.intelliSenseEngine": "Disabled",
     "files.associations": {
         "coroutine": "cpp",
         "cstddef": "cpp",
@@ -21,8 +20,8 @@
         "functional": "cpp",
         "type_traits": "cpp",
         "__config": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "future": "cpp"
     },
     "C_Cpp.intelliSenseEngineFallback": "Enabled",
-    "RTT_Studio.Build.Parallel_Jobs": "1",
 }
