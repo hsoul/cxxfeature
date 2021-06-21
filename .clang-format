@@ -1,7 +1,7 @@
 ---
 # BasedOnStyle:  Google
-AccessModifierOffset: -2 # 访问说明符(public、private等)的偏移
-IndentWidth:     2 # 缩进
+AccessModifierOffset: -4 # 访问说明符(public、private等)的偏移
+IndentWidth:     4 # 缩进
 TabWidth:        8
 AlignAfterOpenBracket:	Align # 开括号(开圆括号、开尖括号、开方括号)后的对齐: Align, DontAlign, AlwaysBreak(总是在开括号后换行)
 AlignConsecutiveDeclarations: false # 连续声明时，对齐所有声明的变量名
@@ -66,6 +66,7 @@ BraceWrapping: # 大括号换行，只有当BreakBeforeBraces设置为Custom时�
 
 BinPackArguments: false # false表示函数实参要么都在同一行，要么都各自一行
 BinPackParameters: false # false表示所有形参要么都在同一行，要么都各自一行
+IndentPPDirectives: BeforeHash 
 
 ...
 

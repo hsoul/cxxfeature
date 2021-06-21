@@ -8,9 +8,8 @@
             "name": "clang++ - 生成和调试活动文件",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/src/lthread",
+            "program": "${workspaceFolder}/build/bin/rmain",
             "args": [
-                "/k",
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
