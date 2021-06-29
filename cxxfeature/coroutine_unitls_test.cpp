@@ -215,29 +215,29 @@ static void foo(struct schedule* S, void* user_data)
     printf("foo end\n");
 }
 
-static int jtset()
-{
-    return 0;
-}
+// static int jtset()
+// {
+//     return 0;
+// }
 
-static void foo2(struct schedule* S, void* user_data)
-{
-    printf("foo start\n");
-    int an = 1;
-    printf("hello world %d\n", an);
-    coroutine_yield(S);
-    int ret = jtset();
-    printf("dosomething else %d\n", ret);
-    coroutine_yield(S);
-    printf("foo end\n");
-}
+// static void foo2(struct schedule* S, void* user_data)
+// {
+//     printf("foo start\n");
+//     int an = 1;
+//     printf("hello world %d\n", an);
+//     coroutine_yield(S);
+//     int ret = jtset();
+//     printf("dosomething else %d\n", ret);
+//     coroutine_yield(S);
+//     printf("foo end\n");
+// }
 
 static void test(struct schedule* S)
 {
-    struct args arg1 = {10, 1};
+    // struct args arg1 = {10, 1};
     struct args arg2 = {100, 2};
 
-    int co1 = coroutine_new(S, foo, &arg1);
+    // int co1 = coroutine_new(S, foo, &arg1);
     int co2 = coroutine_new(S, foo, &arg2);
     // int co3 = coroutine_new(S, foo2, NULL);
 
