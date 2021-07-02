@@ -1231,7 +1231,7 @@ void Test()
 }
 } // namespace TestCoroutines_StartJobWithAutomaticResumptionOnThread
 
-void DoTest()
+void DoCoroutinesTest()
 {
     // TestCoroutinesSimple::Test();
     // TestCoroutinesHelloWorld::Test();

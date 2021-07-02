@@ -2,5 +2,7 @@
 
 namespace Test
 {
-void DoCoroutinesTest();
+
+void DoGrammarTest();
+
 }
