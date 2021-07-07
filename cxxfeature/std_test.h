@@ -6,6 +6,6 @@
 namespace Test
 {
 
-void DoGrammarTest();
+void DoStdTest();
 
 }
