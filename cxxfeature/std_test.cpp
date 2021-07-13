@@ -62,7 +62,11 @@ inline std::ostream& operator<<(std::ostream& os, const std::deque<T>& x)
 
 void Test()
 {
-    std::map<int, int> map = {{1, 1}, {2, 2}, {3, 3}};
+    std::map<int, int> map = {
+        {1, 1},
+        {2, 2},
+        {3, 3}
+    };
     std::list<int> list = {1, 2, 3};
     std::cout << map;
     std::cout << list << "\n";

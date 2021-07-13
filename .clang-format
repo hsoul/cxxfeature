@@ -3,8 +3,14 @@
 AccessModifierOffset: -4 # 访问说明符(public、private等)的偏移
 IndentWidth:     4 # 缩进
 TabWidth:        8
+#AlignConsecutiveAssignments: AcrossEmptyLinesAndComments # 连续多个声明赋值对齐
+#AlignConsecutiveDeclarations: AcrossEmptyLinesAndComments # 连续声明时，对齐所有声明的变量名
+# AlignConsecutiveDeclarations: false # 连续声明时，对齐所有声明的变量名
+AlignArrayOfStructures: Left
+AlignConsecutiveMacros: AcrossEmptyLinesAndComments # 连续声明对齐多个宏
 AlignAfterOpenBracket:	Align # 开括号(开圆括号、开尖括号、开方括号)后的对齐: Align, DontAlign, AlwaysBreak(总是在开括号后换行)
-AlignConsecutiveDeclarations: false # 连续声明时，对齐所有声明的变量名
+# AllowAllArgumentsOnNextLine:false
+# Cpp11BracedListStyle : false
 ConstructorInitializerIndentWidth: 4
 AlignEscapedNewlinesLeft: true
 AlignTrailingComments: true
@@ -60,13 +66,12 @@ BraceWrapping: # 大括号换行，只有当BreakBeforeBraces设置为Custom时�
   BeforeCatch:	true # catch之前
   BeforeElse:	true # else之前
   IndentBraces:	false # 缩进大括号
-  SplitEmptyFunction: true
+  SplitEmptyFunction: false
   SplitEmptyRecord: true
   SplitEmptyNamespace: true
 
 BinPackArguments: false # false表示函数实参要么都在同一行，要么都各自一行
 BinPackParameters: false # false表示所有形参要么都在同一行，要么都各自一行
-IndentPPDirectives: BeforeHash 
-
+IndentPPDirectives: BeforeHash
 ...
 
