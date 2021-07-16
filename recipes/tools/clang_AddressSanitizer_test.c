@@ -11,6 +11,7 @@ struct elem
 int main()
 {
     char *p = malloc(sizeof(char) * 10);
+
     if (p == NULL)
     {
         return 0;
