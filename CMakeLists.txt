@@ -25,6 +25,12 @@ set(CMAKE_CXX_FLAGS_RELEASE "-02 -DNDEBUG")
 
 set(CMAKE_BUILD_TYPE Debug CACHE STRING "set build type to debug")
 
+# 指定链接阶段编译选项
+# set(CMAKE_EXE_LINKER_FLAGS_INIT "-fuse-ld=lld -fsanitize=address") # 这是全局性的
+# set(CMAKE_MODULE_LINKER_FLAGS_INIT "-fuse-ld=lld")
+# set(CMAKE_SHARED_LINKER_FLAGS_INIT "-fuse-ld=lld")
+# set(CMAKE_STATIC_LINKER_FLAGS_INIT "-fuse-ld=lld")
+
 set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CMAKE_COMMAND} -E time")
 set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK "${CMAKE_COMMAND} -E time")
 
