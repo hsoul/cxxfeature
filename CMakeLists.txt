@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16.3) # CMake 最低版本号要求
 
-option(USE_CLANG "use clang as compiler" true)
+option(USE_CLANG "use clang as compiler" false)
 
 if (USE_CLANG) 
   set(CMAKE_ASM_COMPILER "clang") 

@@ -1,4 +1,5 @@
 #include "grammar_test.h"
+#include <chrono>
 #include <cstddef>
 #include <cstdlib>
 #include <deque>
@@ -175,10 +176,76 @@ void Test()
 
 } // namespace Std_byte_order
 
+namespace Grammar_out_for_define_vars
+{
+static std::vector<int> vec = {0, 1};
+
+void func(int& v)
+{
+    ++v;
+    vec[v] = 1;
+}
+
+void Test()
+{
+    int times = 10000000;
+    auto start = std::chrono::high_resolution_clock::now();
+    int a = 0;
+    for (int i = 0; i < times; ++i)
+    {
+        a = 0;
+        func(a);
+    }
+    auto end = std::chrono::high_resolution_clock::now();
+    double count = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+    std::cout << "out define [" << times << "] time " << count << std::endl;
+
+    start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < times; ++i)
+    {
+        int b = 0;
+        func(b);
+    }
+    end = std::chrono::high_resolution_clock::now();
+    count = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+    std::cout << "int define [" << times << "] time " << count << std::endl;
+}
+
+} // namespace Grammar_out_for_define_vars
+
+namespace Grammar_move_bin
+{
+#define COLOR_COUNT_MAX 8
+#define COLOR_MASK_MAX  ((1 << COLOR_COUNT_MAX) - 1)
+
+void Test()
+{
+    auto&& swar = [](unsigned char i) -> unsigned char {
+        i = (i & 0x55) + ((i >> 1) & 0x55);
+        i = (i & 0x33) + ((i >> 2) & 0x33);
+        i = (i & 0x0F) + ((i >> 4) & 0x0F);
+        return i;
+    };
+    std::array<int, COLOR_MASK_MAX + 1> color_mask_2_count;
+    for (int i = 0; i <= COLOR_MASK_MAX; ++i)
+    {
+        color_mask_2_count[i] = swar((unsigned char)i);
+    }
+
+    for (int i = 0; i < (int)color_mask_2_count.size(); ++i)
+    {
+        printf("%d -> %d\n", i, color_mask_2_count[i]);
+    }
+}
+
+} // namespace Grammar_move_bin
+
 void DoGrammarTest()
 {
     // Std_class_new::Test();
-    Std_byte_order::Test();
+    // Std_byte_order::Test();
+    // Grammar_out_for_define_vars::Test();
+    Grammar_move_bin::Test();
 }
 
 } // namespace Test

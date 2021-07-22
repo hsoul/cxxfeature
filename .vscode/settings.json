@@ -9,7 +9,7 @@
         // "--header-insertion-decorators",
         "-log=verbose",
         "-pretty",
-        "--clang-tidy"
+        // "--clang-tidy"
     ],
     "clangd.onConfigChanged": "restart",
     "clangd.semanticHighlighting": true,

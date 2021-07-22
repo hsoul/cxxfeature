@@ -137,7 +137,7 @@ int main(int argc, char** argv)
     // Test::DoCoroutinesTest();
     // Test::DoCoroutineUnitlsTest();
     // Test::DoAlgorithmTest();
-    // Test::DoGrammarTest();
+    Test::DoGrammarTest();
     // Test::DoStdTest();
 
     return 0;
