@@ -127,7 +127,7 @@ namespace Std_byte_order
 struct S1
 {
     char m1;
-    long m2;
+    short m2;
 };
 #pragma pack(pop)
 
@@ -135,24 +135,30 @@ struct S1
 struct S2
 {
     char m1;
-    long m2;
+    short m2;
 };
 #pragma pack(pop)
 
 void Test()
 {
-    // struct S1 s1;
-    // struct S1 s2;
-    // printf("s    address:   %p\n", &s1);
-    // printf("s.m2 address:   %p\n", &(s1.m2));
-    // printf("s    address:   %p\n", &s2);
-    // printf("s.m2 address:   %p\n", &(s2.m2));
+    struct S1 s1;
+    struct S1 s2;
+    s1.m2 = 0x3217;
+    printf("s    address:   %p\n", &s1);
+    printf("s.m2 address:   %p\n", &(s1.m2));
+    printf("s    address:   %p\n", &s2);
+    printf("s.m2 address:   %p\n", &(s2.m2));
 
     short x = 0x3217;
     char* p = (char*)&x;
     int b1 = p[0];
     int b2 = p[1];
-    printf("sizeof x %d: %x %x %p %p\n", (int)sizeof(x), b1, b2, p, p + 1);
+    printf("sizeof x     %d: %x %x %p %p\n", (int)sizeof(x), b1, b2, p, p + 1);
+
+    p = (char*)&s1.m2;
+    b1 = p[0];
+    b2 = p[1];
+    printf("sizeof s1.m2 %d: %x %x %p %p\n", (int)sizeof(s1.m2), b1, b2, p, p + 1);
 
     union
     {
@@ -240,12 +246,31 @@ void Test()
 
 } // namespace Grammar_move_bin
 
+namespace Grammar_string
+{
+
+#define SUB_STR "hello world"
+
+void Test()
+{
+    std::string str = "begin'" SUB_STR "'end";
+    std::cout << str << std::endl;
+    const char* c_str = // "begin'" "sdfasf" "'end" // 中间没有空格，分开是表示它是一个字符串数组的拼接 // https://stackoverflow.com/questions/5256313/c-c-macro-string-concatenation
+        "begin'"
+        "sdfasf"
+        "'end";
+    std::cout << c_str << std::endl;
+}
+
+} // namespace Grammar_string
+
 void DoGrammarTest()
 {
     // Std_class_new::Test();
     // Std_byte_order::Test();
     // Grammar_out_for_define_vars::Test();
-    Grammar_move_bin::Test();
+    // Grammar_move_bin::Test();
+    Grammar_string::Test();
 }
 
 } // namespace Test

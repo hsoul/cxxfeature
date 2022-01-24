@@ -2,9 +2,11 @@
 #include "coroutine_unitls_test.h"
 #include "coroutines_test.h"
 #include "grammar_test.h"
+#include "module_test.h"
 #include "std_test.h"
 #include <bitset>
 #include <chrono>
+#include <functional>
 #include <getopt.h>
 #include <iostream>
 #include <stdio.h>
@@ -139,6 +141,12 @@ int main(int argc, char** argv)
     // Test::DoAlgorithmTest();
     Test::DoGrammarTest();
     // Test::DoStdTest();
+
+    std::function<void(int)> f_display = [](int a) { std::cout << a << std::endl; };
+    std::function<void(int)> f_display2 = f_display;
+
+    f_display(1);
+    f_display2(2);
 
     return 0;
 }

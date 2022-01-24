@@ -1,5 +1,5 @@
 add_subdirectory(base)
-add_subdirectory(apue)
+# add_subdirectory(apue)
 add_subdirectory(cxxfeature)
 # add_subdirectory(tools)
-add_subdirectory(algorithm)
+# add_subdirectory(algorithm)
