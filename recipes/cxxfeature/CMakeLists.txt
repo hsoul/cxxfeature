@@ -6,6 +6,12 @@ file (GLOB_RECURSE BASE_SRC
     base/*.h
 )
 
+list(REMOVE_ITEM CXX_FEATURE_SRC 
+    ./coroutines_test.cpp
+)
+
+message(STATUS ${CXX_FEATURE_SRC})
+
 add_executable(cxxfeature ${CXX_FEATURE_SRC} ${BASE_SRC})
 
 TARGET_LINK_LIBRARIES(

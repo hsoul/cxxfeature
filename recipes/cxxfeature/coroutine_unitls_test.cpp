@@ -1,8 +1,11 @@
 #include "coroutine_unitls_test.h"
 #include <cstddef>
+#include <cstring>
 #include <iostream>
 #include <recipes/base/coroutine.h>
+#include <stdint.h>
 #include <stdio.h>
+#include <string.h>
 #include <sys/ucontext.h>
 #include <ucontext.h>
 #include <unistd.h>
@@ -268,6 +271,29 @@ void Test()
 }
 
 } // namespace CoroutineUnitl_usercoroutine
+
+namespace CoroutineUnitl_boost_context
+{
+
+#pragma pack(1)
+
+typedef void (*RegCallFuc)(void*);
+
+typedef struct _FunEnvInfo
+{
+    _FunEnvInfo()
+    {
+        memset(this, 0, sizeof(_FunEnvInfo));
+    }
+    int re_eip; // 0
+    int re_esp; // 4
+} FunEnvInfo, *FunEnvInfoPtr;
+
+void Test()
+{
+}
+
+} // namespace CoroutineUnitl_boost_context
 
 void DoCoroutineUnitlsTest()
 {

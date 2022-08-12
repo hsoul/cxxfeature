@@ -4,15 +4,25 @@
 #include "grammar_test.h"
 #include "module_test.h"
 #include "std_test.h"
+#include "type_traits_test.h"
+
+#include <algorithm>
+#include <assert.h>
 #include <bitset>
 #include <chrono>
+#include <cstring>
 #include <functional>
 #include <getopt.h>
 #include <iostream>
+#include <iterator>
+#include <map>
+#include <random>
 #include <stdio.h>
 #include <string.h>
+#include <sys/types.h>
 #include <thread>
 #include <unistd.h>
+#include <vector>
 
 int parse_opt(int argc, char** argv)
 {
@@ -139,14 +149,9 @@ int main(int argc, char** argv)
     // Test::DoCoroutinesTest();
     // Test::DoCoroutineUnitlsTest();
     // Test::DoAlgorithmTest();
-    Test::DoGrammarTest();
+    // Test::DoGrammarTest();
     // Test::DoStdTest();
-
-    std::function<void(int)> f_display = [](int a) { std::cout << a << std::endl; };
-    std::function<void(int)> f_display2 = f_display;
-
-    f_display(1);
-    f_display2(2);
+    // Test::DoTypeTraitsTest();
 
     return 0;
 }

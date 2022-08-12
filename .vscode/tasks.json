@@ -21,7 +21,7 @@
         {
             "type": "shell",
             "label": "build_run",
-            "command": "cd ${workspaceFolder}/build/; cmake ..; make; ./bin/rmain",
+            "command": "cd ${workspaceFolder}/build/; cmake ..; make; ./bin/cxxfeature",
             "group": {
                 "kind": "build",
                 "isDefault": true

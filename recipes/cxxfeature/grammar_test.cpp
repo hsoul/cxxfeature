@@ -1,4 +1,5 @@
 #include "grammar_test.h"
+#include <array>
 #include <chrono>
 #include <cstddef>
 #include <cstdlib>

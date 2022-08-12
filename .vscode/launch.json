@@ -5,58 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "clang++ - 生成和调试活动文件",
+            "name": "cxxfeature",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/rmain",
-            "args": [
-            ],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": false
-                }
-            ],
-            // "preLaunchTask": "C/C++: clang++ build active file",
-            "miDebuggerPath": "/usr/bin/gdb",
-            // "miDebuggerPath": "/usr/bin/cgdb",
-            "miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /bin/gdb -q --interpreter=mi"
-        },
-        {
-            "name": "chatserver",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/bin/testchatserver",
-            "args": [
-            ],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": false
-                }
-            ],
-            // "preLaunchTask": "C/C++: clang++ build active file",
-            "miDebuggerPath": "/usr/bin/gdb",
-            // "miDebuggerPath": "/usr/bin/cgdb",
-            "miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /bin/gdb -q --interpreter=mi"
-        },
-        {
-            "name": "http_main",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/bin/http_main",
+            "program": "${workspaceFolder}/build/bin/cxxfeature",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -70,10 +22,8 @@
                     "ignoreFailures": false
                 }
             ],
-            // "preLaunchTask": "C/C++: clang++ build active file",
-            "miDebuggerPath": "/usr/bin/gdb",
-            // "miDebuggerPath": "/usr/bin/cgdb",
-            "miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /bin/gdb -q --interpreter=mi"
+            "preLaunchTask": "build_all",
+            "miDebuggerPath": "/usr/local/bin/gdb",
         },
     ]
 }
